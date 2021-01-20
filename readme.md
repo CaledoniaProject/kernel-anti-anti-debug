@@ -14,6 +14,6 @@ rpm -ivh https://buildlogs.centos.org/c7.1908.u.x86_64/kernel/20200205213736/3.1
 Apply the patch and build the RPM package
 
 ```
-cp disable-tracerpid.patch ~/rpmbuild/SOURCES/linux-kernel-test.patch
+curl https://raw.githubusercontent.com/CaledoniaProject/kernel-anti-anti-debug/main/disable-tracerpid.patch -o ~/rpmbuild/SOURCES/linux-kernel-test.patch
 rpm-build -bb ~/rpmbuild/SPECS/kernel.spec
 ```
